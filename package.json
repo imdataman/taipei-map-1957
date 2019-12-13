@@ -1,0 +1,32 @@
+{
+  "name": "taipei-map-1957",
+  "version": "1.0.0",
+  "description": "An interactive map that lets users explore the landscape of Taipei back in 1957",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "webpack-dev-server --config webpack.config.js",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imdataman/taipei-map-1957.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imdataman/taipei-map-1957/issues"
+  },
+  "homepage": "https://github.com/imdataman/taipei-map-1957#readme",
+  "devDependencies": {
+    "css-loader": "^3.3.0",
+    "style-loader": "^1.0.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "ol": "^6.1.1",
+    "ol-ext": "^3.1.7"
+  }
+}

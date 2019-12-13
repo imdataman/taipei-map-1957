@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="user-scalable=no">
+    <meta charset='utf-8' />
+    <title>台北歷史對照地圖 A Lens to Taipei in 1957</title>
+    <meta property="og:title" content="台北歷史對照地圖 A Lens to the Past of Taipei">
+    <meta property="og:description" content="運用衛星圖與歷史航照圖呈現台北街景變遷 Use satellite image and historical aerial image to display changes of Taipei streets">
+    <meta property="og:image" content="image/thumbnail.png">
+    <meta property="og:url" content="https://imdataman.github.io/tw-election-map/">
+    <meta name="twitter:title" content="台北歷史對照地圖 A Lens to the Past of Taipei">
+    <meta name="twitter:description" content="運用衛星圖與歷史航照圖呈現台北街景變遷 Use satellite image and historical aerial image to display changes of Taipei streets">
+    <meta name="twitter:image" content="image/thumbnail.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <script
+        src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL">
+    </script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        #mainTitle {
+            position: absolute;
+            left: 13%;
+            top: 8%;
+            font-family: Helvetica;
+            z-index: 10000;
+            font-size: 36px;
+            color: white;
+            padding: 0px 30px 0px 30px;
+            background-color: rgba(120, 120, 120, 0.8);
+            pointer-events: none;
+        }
+
+        #source {
+            font-size: 14px;
+            margin-top: 0px;
+        }
+
+        #byline {
+            font-size: 14px;
+            margin-top: -30px;
+            margin-bottom: 40px;
+        }
+
+        #standout {
+            font-size: 18px;
+            margin-top: -30px;
+        }
+
+        #byline br {
+            line-height: 22px;
+        }
+
+        .social-icon {
+            height: 32px;
+            transform: translate(0px, 0.7em);
+            pointer-events: auto;
+        }
+
+        #github-icon {
+            height: 18px;
+            transform: translate(0px, 0.15em);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mainTitle">
+        <p>台北歷史對照地圖</p>
+        <p id="standout">圓圈內是1957年，圓圈外是2019年</p>
+        <p id="source">資料來源：台灣百年歷史地圖、Google Earth</p>
+        <p id="byline">製作：林佳賢<a href="https://twitter.com/imandylin2" target="_blank"><img class='social-icon'
+                    src="image/Twitter_Logo_Blue.svg"></a><a href="https://github.com/imdataman" target="_blank"><img
+                    class='social-icon' id="github-icon" src="image/GitHub-Mark.svg"></a></p>
+    </div>
+    <div id="map"></div>
+    <script src="main.js"></script>
+</body>
+
+</html>
