@@ -108,6 +108,9 @@ function setFilter(e) {
 
 if (mobile) {
     map.on("click", setFilter)
+    setFilter({
+        pixel: [document.body.offsetWidth / 2, document.body.offsetHeight / 2]
+    })
 } else {
     map.on("pointermove", setFilter)
 }
