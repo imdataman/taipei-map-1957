@@ -76,7 +76,7 @@ var roadLabel = new VectorLayer({
 
 var map = new Map({
     target: 'map',
-    layers: [newLayer, oldLayer],
+    layers: [newLayer, oldLayer, roadLabel],
     view: new View({
         center: center,
         zoom: 16,
